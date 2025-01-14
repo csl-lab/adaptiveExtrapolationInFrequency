@@ -1,6 +1,6 @@
 # Adaptive multipliers for extrapolation in frequency
 
-Numerical implementation of a method to find an optimal multiplier to perform extrapolation in the frequency domain. The method assumes that the Fourier transforms of functions in a finite collection $\mathcal{U}$ are known on a domain $\Omega_0$. Given an extrapolation factor $\alpha > 1$ the method finds an optimal multiplier, in a suitable sense, that extrapolates the Fourier transform to $\alpha\Omega_0$. 
+Numerical implementation of a method to find an optimal multiplier to perform extrapolation in the frequency domain. The method assumes that the Fourier transforms of functions in a finite collection $\mathcal{{U}}$ are known on a domain $\Omega_0$. Given an extrapolation factor $\alpha > 1$ the method finds an optimal multiplier, in a suitable sense, that extrapolates the Fourier transform to $\alpha\Omega_0$. 
 
 The optimal multipliers have a canonical structure solely determined by a positive semidefinite Hermitian matrix $\Sigma$. We call these $\Sigma$-multipliers. An inexact Krasnoselskii-Mann fixed point iteration is used to find the matrix $\Sigma^{\star}$ associated to the optimal multiplier.
 
@@ -42,12 +42,12 @@ The numerical experiments access the [MNIST dataset](https://yann.lecun.com/exdb
 
 ``adaptiveExtrapolationInFrequency\``
 * ``objects\``
-    * ``domain.py``: objects defining choices for the low-frequency domain $\Omega_0s
+    * ``domain.py``: objects defining choices for the low-frequency domain $\Omega_0$
     * ``multiplier.py``: objects defining $\Sigma$-multipliers
     * ``projector.py``: objects implementing orthogonal projectors for the fixed-point iteration
     * ``solver.py``: objects implementing the fixed-point iteration
 * ``routines\``
-    * ``collections.py``: definition of collections $\mathcal{U}$
+    * ``collections.py``: definition of collections $\mathcal{{U}}$
     * ``integrals.py``: computation of the inverse Fourier transform
     * ``mra.py``: functions required to construct a basis for a multiresolution analysis
 
