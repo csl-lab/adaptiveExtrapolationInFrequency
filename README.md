@@ -6,24 +6,32 @@ The optimal multipliers have a canonical structure solely determined by a positi
 
 Version 1.0
 
-Date: 13.01.2025
+Date: 02.02.2025
 
 ## References
 
 The motivation behind the method, the algorithms, and the proofs for the theoretical results can be found in:
 
-> D. Castelli Lacunza and C. A. Sing Long, *Adaptive multipliers for frequency extrapolation*. 2024
+> D. Castelli Lacunza and C. A. Sing Long, "*Adaptive multipliers for frequency extrapolation*." January 28, 2025. [arXiv:2501.17019](https://doi.org/10.48550/arXiv.2501.17019).
+
+The following manuscripts have built upon these ideas.
+
+> D. Castelli Lacunza and C. A. Sing Long, "*Translation-invariant extrapolation in frequency using adaptive multipliers*." January 31, 2025.
+
+The code reproducing the results of their numerical experiments can be found on ``experiments``.
 
 ### Citation
 
-You can use the following to cite our work.
+You can use the following code to cite our work.
 
 ```bibtex
-@article{castelli_adaptive_2025, 
-  title   = {Adaptive multipliers for extrapolation in frequency},  
-  author  = {Castelli Lacunza, Diego and Sing Long, Carlos A}, 
-  year    = {2024}
-}
+@misc{lacunza_adaptive_2025,
+	title     = {Adaptive multipliers for extrapolation in frequency},
+	doi       = {10.48550/arXiv.2501.17019},
+	number    = {{arXiv}:2501.17019},
+	publisher = {{arXiv}},
+	author    = {Castelli Lacunza, Diego and Sing Long, Carlos A.},
+	date      = {2025-01-28}}
 ```
 
 ## Repository
@@ -36,7 +44,7 @@ The dependencies for the Python implementation are:
 * ``scikit-learn``
 * ``matplotlib``
 
-The numerical experiments access the [MNIST dataset](https://yann.lecun.com/exdb/mnist/) using ``scikit-learn``. 
+Some numerical experiments access the [MNIST dataset](https://yann.lecun.com/exdb/mnist/) using ``scikit-learn``. 
 
 ### Structure
 
@@ -52,9 +60,13 @@ The numerical experiments access the [MNIST dataset](https://yann.lecun.com/exdb
     * ``mra.py``: functions required to construct a basis for a multiresolution analysis
 
 ``experiments\``
-* ``FIGS\``: folder in which the figures will be saved
-* ``01_MNIST.ipynb``: extrapolation in frequency for MNIST image data
-* ``02_MNIST.ipynb``: extrapolation in frequency for MNIST image data with horizontal/vertical multipliers
-* ``03_MRA_1D.ipynb``: recovery of a refinable function using $\Sigma$-multipliers
-* ``04_MRA_1D_SMultiplier.ipynb``: construction of a multiresolution from an optimal multiplier
+  * ``arXiv.2501.17019\``: experiments in "*Adaptive multipliers for frequency extrapolation*"
+    * ``FIGS\``: folder in which the figures will be saved
+    * ``01_MNIST.ipynb``: extrapolation in frequency for MNIST image data
+    * ``02_MNIST.ipynb``: extrapolation in frequency for MNIST image data with horizontal/vertical multipliers
+    * ``03_MRA_1D.ipynb``: recovery of a refinable function using $\Sigma$-multipliers
+    * ``04_MRA_1D_SMultiplier.ipynb``: construction of a multiresolution from an optimal multiplier
+  * ``conference\``: experiments in "*Translation-invariant extrapolation in frequency using adaptive multipliers*"
+    * ``FIGS\``: folder in which the figures will be saved
+    * ``01_1D_Translations.ipynb``: translation-invariant MSE optimal multipliers in 1D
  
